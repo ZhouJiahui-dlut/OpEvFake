@@ -1,5 +1,6 @@
 # OpEvFake
-The implementation of the paper Unveiling Opinion Evolution via Prompting and Diffusion for Short Video Fake News Detection.
+Official repository for "Unveiling Opinion Evolution via Prompting and Diffusion for Short Video Fake News Detection", ACL Findings 2024.
+https://aclanthology.org/2024.findings-acl.642/
 
 ## Dataset:
 FakeSV: https://github.com/ICTMCG/FakeSV
