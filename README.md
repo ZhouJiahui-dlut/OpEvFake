@@ -8,13 +8,14 @@ FakeSV: https://github.com/ICTMCG/FakeSV
 ## Environment:
 Python 3.9
 
-Pytorch 2.2.2
+PyTorch 2.2.2
 
 CUDA 11.8
 
 ## Run the Code
-1. Put the downloaded data in 'data/'. Create the `dataloader_fakesv.py` file that contains the get_dataloader function.
-2. Command as follows.
+1. As described in section 3.3 of the paper, use LLMs to generate an implicit opinion representation.
+2. Place the FakeSV features and implicit opinion representation features in the 'data/' directory. Then, create the `dataloader_fakesv.py` file containing the `get_dataloader` function.
+3. Command as follows.
 ```
 python main.py
 ```
