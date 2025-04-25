@@ -14,9 +14,10 @@ For keyframes, video motion and audio, we used pre-extracted features from FakeS
 For title&transcript, comments, user and implicit opinion, we pre-extracted the features and placed them in the 'data/' directory. You can also choose to extract features in the same way as in 'dataloader.py' from FakeSV(https://github.com/ICTMCG/FakeSV/blob/main/code/utils/dataloader.py).
 
 ## Run the Code
-1. As described in section 3.3 of the paper, use LLMs to generate an implicit opinion representation.
-2. Use the '.txt' files in the 'data/temporal_new/' to screen the effective keyframes, video motion and audio features from FakeSV. Then, use the '.py' files in the 'fakesv_data_extract/' to extract features for text(title&transcript, comments), user, and implicit opinion separately. The feature for each modality is saved as three .pkl files for the training, validation, and test sets. Taking audio as an example, please save the filtered audio feature files as 'audio_train.pkl', 'audio_val.pkl', and 'audio_test.pkl' in the 'data/' directory.
-3. Command as follows.
+1. Download 'data.json' from FakeSV(https://github.com/ICTMCG/FakeSV/blob/main/dataset/data.json) and place it in the 'data/' directory.
+2. As described in section 3.3 of the paper, use LLMs to generate an implicit opinion representation.
+3. Use the '.txt' files in the 'data/temporal_new/' to screen the effective keyframes, video motion and audio features from FakeSV. Then, use the '.py' files in the 'fakesv_data_extract/' to extract features for text(title&transcript, comments), user, and implicit opinion separately. The feature for each modality is saved as three .pkl files for the training, validation, and test sets. Taking audio as an example, please save the filtered audio feature files as 'audio_train.pkl', 'audio_val.pkl', and 'audio_test.pkl' in the 'data/' directory.
+4. Command as follows.
 ```
 python main.py
 ```
