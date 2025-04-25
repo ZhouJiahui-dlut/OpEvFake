@@ -2,9 +2,6 @@
 Official repository for "Unveiling Opinion Evolution via Prompting and Diffusion for Short Video Fake News Detection", ACL Findings 2024.
 https://aclanthology.org/2024.findings-acl.642/
 
-## Dataset:
-FakeSV: https://github.com/ICTMCG/FakeSV
-
 ## Environment:
 Python 3.9
 
@@ -12,9 +9,13 @@ PyTorch 2.2.2
 
 CUDA 11.8
 
+## Data Processing:
+For keyframes, video motion and audio, we used pre-extracted features from FakeSV(https://github.com/ICTMCG/FakeSV). Due to partial data loss, we pre-filtered the video IDs provided by FakeSV and saved them in the 'data/temporal_new/'.
+For title&transcript, comments, user and implicit opinion, we pre-extracted the features and placed them in the 'data/' directory. You can also choose to extract features in the same way as in 'dataloader.py' from FakeSV(https://github.com/ICTMCG/FakeSV/blob/main/code/utils/dataloader.py).
+
 ## Run the Code
 1. As described in section 3.3 of the paper, use LLMs to generate an implicit opinion representation.
-2. Place the FakeSV features and implicit opinion representation features in the 'data/' directory. Then, create the `dataloader_fakesv.py` file containing the `get_dataloader` function.
+2. Use the '.txt' files in the 'data/temporal_new/' to screen the effective keyframes, video motion and audio features from FakeSV. Then, use the '.py' files in the 'fakesv_data_extract/' to extract features for text(title&transcript, comments), user, and implicit opinion separately. The feature for each modality is saved as three .pkl files for the training, validation, and test sets. Taking audio as an example, please save the filtered audio feature files as 'audio_train.pkl', 'audio_val.pkl', and 'audio_test.pkl' in the 'data/' directory.
 3. Command as follows.
 ```
 python main.py
