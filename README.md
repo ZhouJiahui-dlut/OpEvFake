@@ -22,6 +22,9 @@ For title&transcript, comments, user and implicit opinion, we pre-extracted the 
 python main.py
 ```
 
+## Erratum: 
+The negative sign before the summation in Equation (15) of the paper is a typographical error and should be removed; the reconstruction loss is correctly implemented in the released code.
+
 ## Citation:
 @inproceedings{DBLP:conf/acl/ZongZLL0024,
   author       = {Linlin Zong and
